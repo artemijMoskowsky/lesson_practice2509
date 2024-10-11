@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Registration{% endblock  %}
+
+{% block content %}
+    <div id = "body-div">
+        <div id = "reg_placer">
+            <form method = "post" class = "reg_content">
+                <p>User name</p>
+                <input class = "reg_input" type = "text" name = "name" placeholder = "">
+                <p>Password</p>
+                <input class = "reg_input" type = "text" name = "password" placeholder = "">
+                <button type = "submit" class = "reg_submit" ></button>
+            </form>
+        </div>
+    </div>
+
+    {% if confirm %}
+
+        <style>
+        
+            #body-div{
+                opacity: 0.5;
+            }
+        
+        </style>
+        
+        <div id="div0">
+            <h1 id="hh1" align = "center">CONFIRMED</h1>
+
+            <div style="display: flex;" id="div1">
+                <p id = "to_login" style="margin: 0;">→</p>
+                <a id = "to_login" href="/login/">AUTHORISATION</a>           
+            </div>
+        </div>
+  
+    {% endif %}
+
+
+{% endblock %}

@@ -8,4 +8,5 @@ user_app.add_url_rule(
     methods = ["GET", "POST"]
 )
 
+
 main.register_blueprint(user_app)
