@@ -1,13 +1,7 @@
 from .settings import main
-from user import user_app, render_user
-import tour_page
-import home
+from user import user_app, render_user, render_login, render_registration
 
-tour_page.tour_app.add_url_rule(
-    rule = '/tour/',
-    view_func = tour_page.render_tour
-)
-main.register_blueprint(tour_page.tour_app)
+
 
 user_app.add_url_rule(
     rule = "/user/",
@@ -15,14 +9,18 @@ user_app.add_url_rule(
     methods = ["GET", "POST"]
 )
 
-
-main.register_blueprint(user_app)
-
-
-home.home.add_url_rule(
-    rule = "/",
-    view_func = home.render_home
+user_app.add_url_rule(
+    rule = "/user/registration/",
+    view_func = render_registration,
+    methods = ["GET", "POST"]
 )
 
-main.register_blueprint(blueprint = home.home)
+user_app.add_url_rule(
+    rule = "/user/login/",
+    view_func = render_login,
+    methods = ["GET", "POST"]
+)
+
+
+main.register_blueprint(user_app)
 
