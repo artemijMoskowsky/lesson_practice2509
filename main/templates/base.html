@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
-        <title></title>
+        <title>{% block title %}{% endblock %}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        {% block style %}{% endblock %}
     </head>
+    
     <body>
-        <a href="/"></a>
-        <a href="/registration/"></a>
-        <a href ="/login/"></a>
-        <a href="/tour/"></a>
+        <a href="/">Home</a>
+        <a href="/user/">User</a>
+        <a href="/tour/">Tour</a>
+        {% block content %}{% endblock %}
     </body>
+
 </html>
