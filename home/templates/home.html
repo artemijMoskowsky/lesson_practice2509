@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Головна сторінка</h1>
+    <form method = "post">
+        <p class = "input_holder">Your name</p>
+        <input class = "enter_name" type="text" name="name">
+        <p class = "input_holder">Your email</p>
+        <input class = "enter_email" type="text" name="email">
+        <p>Your feedback</p>
+        <textarea name="feedback"></textarea>
+        <button type = "submit">Send</button>
+    </form>
+{% endblock %}
