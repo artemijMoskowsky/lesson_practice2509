@@ -24,7 +24,7 @@ def render_registration():
                     is_user = True  
             if not is_user:
                 confirm = True
-                new_user = User(name = name, password = password)
+                new_user = User(username = name, password = password)
                 DATABASE.session.add(new_user)
                 DATABASE.session.commit()
         except Exception as _ex:
@@ -39,7 +39,7 @@ def render_login():
         password = flask.request.form["password"]
         users = User.query.all()
         for user in users:
-            if user.name == name and user.password == password:
+            if user.username == name and user.password == password:
                 flask_login.login_user(user=user)
                 return flask.redirect("/")
     return flask.render_template(template_name_or_list = "login.html", confirm = confirm, link = "None")
