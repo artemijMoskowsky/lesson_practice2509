@@ -6,8 +6,20 @@ from .models import User
 
 from main.settings import DATABASE
 
+
+def logout():
+    user = flask_login.current_user
+    if type(user) != flask_login.AnonymousUserMixin:
+        flask_login.logout_user()
+    return flask.redirect("/")
+
 def render_user():
-    return flask.render_template(template_name_or_list = "user.html")
+    username = ""
+    try:
+        username = flask_login.current_user.username
+    except:
+        username = ""
+    return flask.render_template(template_name_or_list = "user.html", username = username)
 
 def render_registration():
   

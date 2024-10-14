@@ -4,7 +4,7 @@ import flask_sqlalchemy
 
 main = flask.Flask(
     import_name = "main",
-    static_url_path = "/main/",
+    static_url_path = "/static/",
     template_folder = "templates"
 )
 

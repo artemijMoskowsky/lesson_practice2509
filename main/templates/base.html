@@ -6,13 +6,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block style %}{% endblock %}
+        {% block script %}{% endblock %}
     </head>
     
     <body>
         <a href="/">Home</a>
         <a href="/user/">User</a>
         <a href="/tour/">Tour</a>
+        {% if username != "" %}
+            <h1> {{ username }} </h1>
+            <button id = "log_out_button"> Log out </button>
+        {% endif %}
+        
+
         {% block content %}{% endblock %}
+        <script src = "{{ url_for('static', filename = 'js/base.js') }}"></script>
     </body>
 
 </html>
