@@ -6,19 +6,20 @@ from .models import User
 
 from main.settings import DATABASE
 
-users = User.query.all()
+
 
 def render_user():
     return flask.render_template(template_name_or_list = "user.html")
 
 def render_registration():
-    global users
+  
     confirm = False
     if flask.request.method == "POST":
         name = flask.request.form["username"]
         password = flask.request.form["password"]
         try:
             is_user = False
+            users = User.query.all()
             for user in users:
                 if user.name == name and user.password == password:
                     is_user = True  
@@ -38,6 +39,7 @@ def render_login():
         confirm = False
         name = flask.request.form["username"]
         password = flask.request.form["password"]
+        users = User.query.all()
         for user in users:
             if user.name == name and user.password == password:
                 flask_login.login_user(user=user)
