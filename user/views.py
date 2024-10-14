@@ -6,12 +6,11 @@ from .models import User
 
 from main.settings import DATABASE
 
-
-
 def render_user():
     return flask.render_template(template_name_or_list = "user.html")
 
 def render_registration():
+  
     confirm = False
     if flask.request.method == "POST":
         name = flask.request.form["username"]
@@ -19,6 +18,7 @@ def render_registration():
         try:
             users = User.query.all()
             is_user = False
+            users = User.query.all()
             for user in users:
                 if user.username == name and user.password == password:
                     is_user = True  
@@ -32,7 +32,6 @@ def render_registration():
     return flask.render_template(template_name_or_list = "registration.html", confirm = confirm, link = "None")
 
 def render_login():
-    
     confirm = True
     if flask.request.method == "POST":
         confirm = False
