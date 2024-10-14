@@ -6,7 +6,7 @@
 
     <div id = "body-div">
         <div id="home_placer">
-            <p>Sing in</p>
+            <p>Login</p>
         </div>
         <form method = "post" id = "login_content">
             <p class = "input_holder">Username</p>
@@ -15,6 +15,7 @@
             <input class = "input_holder" type = "text" name = "password" placeholder = "">
             <button class = "login_submit" type = "submit"> Send </button>
         </form>
+        <p>If you are not registered, <a href = "/user/registration/">click here</a>.</p>
     </div>
 
     {% if not confirm %}
@@ -29,7 +30,7 @@
         <h1 id="hh1" align = "center">YOU ARE NOT REGISTERED</h1>
         <div style="display: flex;" id="div1">
             <p id = "to_login" style="margin: 0;">→</p>
-            <a id = "to_login" href="/registration">REGISTRATION</a>           
+            <a id = "to_login" href="/user/registration/">REGISTRATION</a>           
         </div>
     </div>
     {% endif %}
