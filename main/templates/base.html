@@ -13,6 +13,10 @@
         <a href="/">Home</a>
         <a href="/user/">User</a>
         <a href="/tour/">Tour</a>
+        {% if username == "" %}
+            <a href="/user/registration/">Registration</a>
+            <a href="/user/login/">Login</a>
+        {% endif %}
         {% if username != "" %}
             <h1> {{ username }} </h1>
             <button id = "log_out_button"> Log out </button>
