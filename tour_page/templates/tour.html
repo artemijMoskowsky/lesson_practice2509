@@ -6,7 +6,10 @@ Tour
 
 {% block content %}
 <h1>Tour</h1>
+    {% for t_turkey in trip_to_turkey2 %}
+        <p>{{ t_turkey.title }}</p>
+        <p>{{ t_turkey.date }}</p>
+        <p>{{ t_turkey.country }}</p>
+        <a href="/tour/{{ t_turkey.id }}">Посилання</a>
+    {% endfor %}
 {% endblock %}
-
-
-

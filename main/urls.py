@@ -7,6 +7,12 @@ tour_page.tour_app.add_url_rule(
     rule = '/tour/',
     view_func = tour_page.render_tour
 )
+
+tour_page.tour_app.add_url_rule(
+    rule = "/tour/<int:id>",
+    view_func = tour_page.show_trip
+    )
+
 main.register_blueprint(tour_page.tour_app)
 
 user_app.add_url_rule(
@@ -24,4 +30,3 @@ home.home.add_url_rule(
 )
 
 main.register_blueprint(blueprint = home.home)
-
