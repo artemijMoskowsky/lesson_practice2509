@@ -44,4 +44,3 @@ user_app.add_url_rule(
 
 
 main.register_blueprint(user_app)
-main.register_blueprint(blueprint = home.home)
