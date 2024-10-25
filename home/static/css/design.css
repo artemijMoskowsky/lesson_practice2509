@@ -1,0 +1,64 @@
+.feedback_form {
+    position: absolute;
+    left: 21px;
+    bottom: 20px;
+    border-radius: 20px;
+    width: 428px;
+    height: 305px;
+    background-color: rgba(69, 85, 153, 1);
+}
+
+.input_div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 350px;
+    color: white;
+    font-size: 20px;
+    gap: 30px;
+}
+
+.enter_name {
+    border: 1px solid white;
+    border-radius: 20px;
+    font-family: "Inter";
+    
+}
+
+.enter_email {
+    border: 1px solid white;
+    border-radius: 20px;
+    font-family: "Inter";
+}
+
+.input_feedback {
+    border: 1px solid white;
+    border-radius: 20px;
+    font-family: "Inter";
+}
+
+.button_submit {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 170px;
+    background-color: #2C3661;
+    color: white;
+}
+
+.title {
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: rgba(69, 85, 153, 1);
+    color: white;
+    width: 428px;
+    height: 70px;
+    bottom: 305px;
+    left: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+}
+
+
