@@ -2,21 +2,22 @@
 
 {% block title %} Login {% endblock %}
 
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('user.static', filename='login/css/style.css') }}"> {% endblock %}
+
 {% block content %}
 
-    <div id = "body-div">
-        <div id="home_placer">
-            <p>Login</p>
-        </div>
-        <form method = "post" id = "login_content">
-            <p class = "input_holder">Username</p>
-            <input class = "input_holder" type = "text" name = "username" placeholder = "">
-            <p class = "input_holder">Password</p>
-            <input class = "input_holder" type = "text" name = "password" placeholder = "">
-            <button class = "login_submit" type = "submit"> Send </button>
+<div id="body-div">
+    <div class="login_placer">
+        <form method="post" id="login_content">
+            <p class="input_holder">Enter Username:</p>
+            <input class="input_holder" type="text" name="username" placeholder="">
+            <p class="input_holder">Enter Password:</p>
+            <input class="input_holder" type="password" name="password" placeholder="">
+            <button class="login_submit" type="submit">SEND</button>
         </form>
-        <p>If you are not registered, <a href = "/user/registration/">click here</a>.</p>
     </div>
+</div>
 
     {% if not confirm %}
 
