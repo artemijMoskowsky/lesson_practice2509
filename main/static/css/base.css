@@ -1,0 +1,58 @@
+body {
+    background-color: #DCE6FF;
+}
+
+#logo {
+    width: 90px;
+    height: 90px;
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0.25turn, #2C3661, #5A6FC7);
+    width: 100vw;
+    height: 110px;
+}
+
+.navigation-bar {
+    display: flex;
+    gap: 51px;
+    padding-left: 21px;
+    padding-right: 21px;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.n1 {
+    margin-right: auto
+}
+
+.n2 {
+    margin-left: auto;
+}
+
+#log_out_button {
+    background-color: #ffffff00;
+    border-color: #ffffff00;
+}
+
+#logout-image {
+    width: 35.36px;
+    height: 52px;
+}
+
+#login-image {
+    width: 51px;
+    height: 52px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-family: "Inter";
+}

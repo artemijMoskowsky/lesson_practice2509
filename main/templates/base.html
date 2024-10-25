@@ -5,23 +5,33 @@
         <title>{% block title %}{% endblock %}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
         {% block style %}{% endblock %}
         {% block script %}{% endblock %}
     </head>
     
     <body>
-        <a href="/">Home</a>
-        <a href="/user/">User</a>
-        <a href="/tour/">Tour</a>
-        {% if username == "" %}
-            <a href="/user/registration/">Registration</a>
-            <a href="/user/login/">Login</a>
-        {% endif %}
-        {% if username != "" %}
-            <h1> {{ username }} </h1>
-            <button id = "log_out_button"> Log out </button>
-        {% endif %}
-        
+        <header id="navigation">
+            <div class="navigation-bar n1">
+                <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="None" id="logo">
+                <a class="link" href="/">Home</a>
+                <a class="link" href="/tour/">Tour</a>
+            </div>
+            <div class="navigation-bar n2">
+                {% if username == "" %}
+                    <a class="link" href="/user/registration/">Registration</a>
+                    <a class="link" href="/user/login/">Login</a>
+                {% endif %}
+                {% if username != "" %}
+                    <h1> {{ username }} </h1>
+                    <button id = "log_out_button">
+                        <img id="logout-image" src="{{ url_for('static', filename='images/Logout.png') }}" alt="None">
+                    </button>
+                    <a class="link" href="/user/"><img id="login-image" src="{{ url_for('static', filename='images/Account.png') }}" alt="None"></a>
+                {% endif %}
+            </div>
+        </header>
 
         {% block content %}{% endblock %}
         <script src = "{{ url_for('static', filename = 'js/base.js') }}"></script>
