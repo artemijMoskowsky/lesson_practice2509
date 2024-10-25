@@ -2,17 +2,19 @@
 
 {% block title %}Registration{% endblock  %}
 
+{% block style %}<link rel="stylesheet" href="{{ url_for('user.static', filename='registration/css/style.css') }}"> {% endblock %}
+
 {% block content %}
     <div id = "body-div">
-        <div id = "reg_placer">
+        <div class = "reg_placer">
             <form method = "post" class = "reg_content">
-                <p>User name</p>
+                <p class="input_holder">Enter Username:</p>
                 <input class = "reg_input" type = "text" name = "username" placeholder = "">
-                <p>Password</p>
+                <p class="input_holder">Enter Password:</p>
                 <input class = "reg_input" type = "text" name = "password" placeholder = "">
-                <button type = "submit" class = "reg_submit">Send</button>
+                <button type = "submit" class = "reg_submit">SEND</button>
             </form>
-            <p>You already have an account, <a href = "/user/login/">click here</a>.</p>
+            <!-- <p id = "yahac-link" >You already have an account, <a href = "/user/login/">click here</a>.</p> -->
         </div>
     </div>
 
