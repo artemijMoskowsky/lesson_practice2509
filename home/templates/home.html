@@ -1,14 +1,26 @@
 {% extends "base.html" %}
 
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('home.static', filename = 'css/design.css') }}">
+{% endblock %}
+
 {% block content %}
-    <h1>Головна сторінка</h1>
-    <form method = "post">
-        <p class = "input_holder">Your name</p>
-        <input class = "enter_name" type="text" name="name">
-        <p class = "input_holder">Your email</p>
-        <input class = "enter_email" type="text" name="email">
-        <p>Your feedback</p>
-        <textarea name="feedback"></textarea>
-        <button type = "submit">Send</button>
-    </form>
+    <h1 class = "title" align = "center">Зворотній зв'язок</h1>
+    <div class = "feedback_form">
+        <form method = "post">
+            <div class = "input_div">
+                <p class = "input_holder">Ваше ім'я:</p>
+                <input class = "enter_name" type="text" name="name">
+            </div>
+            <div class = "input_div">
+                <p class = "input_holder">Ваш email:</p>
+                <input class = "enter_email" type="text" name="email">
+            </div>
+            <div class = "input_div">
+                <p>Ваш відгук:</p>
+                <textarea name="feedback" class = "input_feedback"></textarea>
+            </div>
+            <button type = "submit" class="button_submit">Відправити</button>
+        </form>
+    </div>
 {% endblock %}
