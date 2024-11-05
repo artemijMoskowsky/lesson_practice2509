@@ -10,45 +10,21 @@ Tour
 
 {% block content %}
 
-<div class = 'main-cart'>
-    <p></p>
-
-    <div class = 'invisible-div'>
-        <div class = 'cart-for-Turkey-back'>
-            <p></p>
-            <div class = 'cart-for-Turkey-front'>
-                <div class = 'more-turkey-1'>
-                    <img src="{{ url_for('tour.static', filename = 'images/turkey.jpg' ) }}" alt="turkey" class = 'turkey-image'>
-                    <!-- <button class = 'button-Turkey'>Перейти до туру</button> -->
-                    <p class = 'turkey-country'> Turkey </p>
+       
+    <div class = 'main-cart'>
+        {% for countries in all_trips %}   
+            <div class = 'invisible-div'>
+                <div class = 'back-cart'>
+                    <div class = 'front-cart'>
+                        <div class = 'more-cart'>
+                            <img src="{{ url_for('tour.static', filename = 'images/turkey.jpg' ) }}" alt="turkey" class = 'image'>
+                            <p class = 'country'>{{ countries.country }}</p>
+                            <a href="/tour/{{ countries.id }}" class = 'button'>Перейти до туру</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
-    
-    <div class = 'invisible-div'></div>
-        <div class = 'cart-for-Australia-back'>
-            <h1></h1>
-            <div class = 'cart-for-Australia-front'>
-                <p></p>
-            </div>
-        </div>
-    </div>
-
-    <div class = 'cart-for-Paris-back'>
-        <h1></h1>
-        <div class = 'cart-for-Paris-front'>
-            <p></p>
-        </div>
-    </div>
-</div>
-
-<h1>Tour</h1>
-    {% for t_turkey in trip_to_turkey2 %}
-        <p>{{ t_turkey.title }}</p>
-        <p>{{ t_turkey.date }}</p>
-        <p>{{ t_turkey.country }}</p>
-        <a href="/tour/{{ t_turkey.id }}">Посилання</a>
-    {% endfor %}
 
 {% endblock %}
