@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* body{
+    background-color: #DCE6FF
+    
+} */
+
+.main-cart{
+    background-color: rgb(220, 230, 255);
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-around; */
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+}
+
+.invisible-div{
+    width: 375px;
+    height: 382px;
+    z-index: 3;
+    margin: 15px;
+}
+
+.back-cart{
+    background-color: rgba(64, 84, 167, 0.5);
+    /* opacity: .3; */
+    border-radius: 25px;
+    width: 346px;
+    height: 355px;
+    z-index: 2;
+    /* padding-top: 15px;
+    padding-left: 15px; */
+
+}
+.front-cart{
+    background-color: rgba(72, 95, 186, 0.5);
+    position: relative;
+    top: 30px;
+    left: 30px;
+    /* opacity: .1,5; */
+    border-radius: 25px;
+    /* left: 4vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 346px;
+    height: 355px;
+    z-index: 1;
+}
+
+.more-cart{
+    width: 346px;
+    height: 355px;
+    border-radius: 25px;
+}
+
+.image{
+    width: 316px;
+    height: 170px;
+    border-radius: 25px;
+    margin-right: 30px;
+}
+
+.button{
+    text-decoration: none;
+    font-family:'Inter', sans-serif; 
+    font-weight: bold;
+    background-color: rgb(81, 100, 219);
+    color: white;
+    width: 67px;
+    height: 30px;
+    text-align: center;
+    margin-left: 105px;
+    margin-top: 100px;
+}
+
+.country{
+    display: block;
+    font-family:'Inter', sans-serif; 
+    font-weight: bold;
+    width: 10px;
+    height: 30px;
+    text-align: center;
+    margin-left: 130px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;   
+
+}
+
+/* .cart-for-Australia-back{
+    background-color:rgb(61, 80, 158, 0.36);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+    height: 376px;
+    z-index: 2;
+    margin: 15px;
+}
+.cart-for-Australia-front{
+    background-color: rgb(61, 81, 157, 0.59);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+    height: 376px;
+    z-index: 1;
+    margin: 15px;
+}
+ */
+
+
+
+
+/* .cart-for-Paris-back{
+}
+.cart-for-Paris-front{
+} */

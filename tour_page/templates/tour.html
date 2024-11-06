@@ -4,12 +4,27 @@
 Tour
 {% endblock %}
 
+{% block style %}
+<link rel = "stylesheet" href = "{{ url_for('tour.static', filename = 'css/style.css' ) }}">
+{% endblock %}
+
 {% block content %}
-<h1>Tour</h1>
-    {% for t_turkey in trip_to_turkey2 %}
-        <p>{{ t_turkey.title }}</p>
-        <p>{{ t_turkey.date }}</p>
-        <p>{{ t_turkey.country }}</p>
-        <a href="/tour/{{ t_turkey.id }}">Посилання</a>
-    {% endfor %}
+
+       
+    <div class = 'main-cart'>
+        {% for countries in all_trips %}   
+            <div class = 'invisible-div'>
+                <div class = 'back-cart'>
+                    <div class = 'front-cart'>
+                        <div class = 'more-cart'>
+                            <img src="{{ url_for('tour.static', filename = 'images/turkey.jpg' ) }}" alt="turkey" class = 'image'>
+                            <p class = 'country'>{{ countries.country }}</p>
+                            <a href="/tour/{{ countries.id }}" class = 'button'>Перейти до туру</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
