@@ -19,7 +19,9 @@ Tour
                         <div class = 'more-cart'>
                             <img src="{{ url_for('tour.static', filename = 'images/turkey.jpg' ) }}" alt="turkey" class = 'image'>
                             <p class = 'country'>{{ countries.country }}</p>
-                            <a href="/tour/{{ countries.id }}" class = 'button'>Перейти до туру</a>
+                            <div class = 'for-button'>
+                                <a href="/tour/{{ countries.id }}" class = 'button'>Перейти до туру</a>
+                            </div>
                         </div>
                     </div>
                 </div>
