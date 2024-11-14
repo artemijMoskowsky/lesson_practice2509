@@ -4,7 +4,9 @@ from main.mail_config import mail, ADMINISTRATION_ADRESS
 
 
 def render_home():
+    is_message = False
     if flask.request.method == "POST":
+        is_message = True
         request_name = flask.request.form["name"]
         request_email = flask.request.form["email"]
         request_feedback = flask.request.form["feedback"]
@@ -16,4 +18,4 @@ def render_home():
         )
 
         mail.send(send_feedback)
-    return flask.render_template(template_name_or_list = "home.html")
+    return flask.render_template(template_name_or_list = "home.html", is_message = is_message)
