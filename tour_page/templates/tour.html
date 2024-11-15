@@ -5,7 +5,7 @@ Tour
 {% endblock %}
 
 {% block style %}
-<link rel = "stylesheet" href = "{{ url_for('tour.static', filename = 'css/style.css' ) }}">
+<link rel = "stylesheet" href = "{{ url_for('tour.static', filename = 'css/style_tour.css' ) }}">
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@ Tour
                 <div class = 'back-cart'>
                     <div class = 'front-cart'>
                         <div class = 'more-cart'>
-                            <img src="{{ url_for('tour.static', filename = 'images/turkey.jpg' ) }}" alt="turkey" class = 'image'>
+                            <img src="{{ url_for('tour.static', filename = 'images/' + countries.id|string + '.jpg') }}" alt="none" class = 'image'>
                             <p class = 'country'>{{ countries.country }}</p>
                             <div class = 'for-button'>
                                 <a href="/tour/{{ countries.id }}" class = 'button'>Перейти до туру</a>

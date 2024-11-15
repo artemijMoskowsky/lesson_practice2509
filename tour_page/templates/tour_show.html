@@ -4,13 +4,39 @@
 Tour show
 {% endblock %}
 
+{% block style %}
+<link rel = "stylesheet" href = "{{ url_for('tour.static', filename = 'css/style_show.css' ) }}">
+{% endblock %}
+
 {% block content %}
-<h1>Tour show</h1>
-    <p>{{ countries.title }}</p>
-    <p>{{ countries.date }}</p>
-    <p>{{ countries.country }}</p>
-    <p>{{ countries.price }}</p>
-    <p>{{ countries.description }}</p>
+    <div class = main-show>
+        <div class = back-show>
+            <div class = white-show>
+                <div class = h-img>
+                    <h2>Date-{{ countries.date }}</h2>
+                    <img src="{{ url_for('tour.static', filename = 'images/' + countries.id|string + '.jpg') }}" alt="none" class = 'image-show'>
+                    <h2>Price-{{ countries.price }}</h2>
+                </div>
+
+                <div class = for-objects>
+                        <h1>{{ countries.title }}</h1>
+
+                        <div class = for-country>
+                            <p>{{ countries.country }}</p>
+                        </div>
+
+                        <div class = for-description>
+                            <p>{{ countries.description }}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 {% endblock %}
 
 
