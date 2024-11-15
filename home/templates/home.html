@@ -5,22 +5,42 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class = "title" align = "center">Зворотній зв'язок</h1>
-    <div class = "feedback_form">
-        <form method = "post">
-            <div class = "input_div">
-                <p class = "input_holder">Ваше ім'я:</p>
-                <input class = "enter_name" type="text" name="name">
-            </div>
-            <div class = "input_div">
-                <p class = "input_holder">Ваш email:</p>
-                <input class = "enter_email" type="text" name="email">
-            </div>
-            <div class = "input_div">
-                <p>Ваш відгук:</p>
-                <textarea name="feedback" class = "input_feedback"></textarea>
-            </div>
-            <button type = "submit" class="button_submit">Відправити</button>
-        </form>
+    <h1 align = "center">The evil Doofenshmirtz corporation</h1>
+    <h2 align = "center">The evil Doofenshmirtz corporation give you the opportunity to travel on any of the tours we offer.</h2>
+    <div class = "center_div">
+        <h2 class = "title" align = "center">Feedback</h2>
+    
+        <div class = "feedback_form">
+            <form method = "post">
+                <div class = "input_div">
+                    <p class = "input_holder"> Your name: </p>
+                    <input class = "enter_name" type="text" name="name">
+                </div>
+                <div class = "input_div">
+                    <p class = "input_holder">Your email:</p>
+                    <input class = "enter_email" type="text" name="email">
+                </div>
+                <div class = "input_div">
+                    <p>Your feedback:</p>
+                    <textarea name="feedback" class = "input_feedback"></textarea>
+                </div>
+                <button type = "submit" class="button_submit">Send</button>
+            </form>
+        </div>
     </div>
+{% if is_message %}
+    <div class = "div_vikno">
+        <div class = "answer_window">
+            <h1>Hey! Your message was sended</h1>
+        </div>
+    </div>
+{% endif %}
 {% endblock %}
+
+
+
+{% block script %}
+    <script defer src="{{ url_for('home.static', filename = 'js/home.js') }}"></script>
+{% endblock %}
+
+
