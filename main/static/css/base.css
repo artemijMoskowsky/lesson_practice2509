@@ -2,6 +2,16 @@ body {
     background-color: #DCE6FF;
 }
 
+a {
+    font-family: "Inter";
+}
+
+.greating {
+    font-family: "Inter";
+    color: white;
+    font-size: 30px;
+}
+
 #logo {
     width: 90px;
     height: 90px;
@@ -15,7 +25,8 @@ body {
     left: 0;
     background: linear-gradient(0.25turn, #2C3661, #5A6FC7);
     width: 100vw;
-    height: 110px;
+    height: 12vh;
+    z-index: 10000000;
 }
 
 .navigation-bar {

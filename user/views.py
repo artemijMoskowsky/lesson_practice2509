@@ -14,20 +14,10 @@ def logout():
     return flask.redirect("/")
 
 def render_user():
-    username = ""
-    try:
-        username = flask_login.current_user.username
-    except:
-        username = ""
-    return flask.render_template(template_name_or_list = "user.html", username = username)
+    return flask.render_template(template_name_or_list = "user.html")
 
 def render_registration():
     confirm = False
-    username = ""
-    try:
-        username = flask_login.current_user.username
-    except:
-        username = ""
     if flask.request.method == "POST":
         name = flask.request.form["username"]
         password = flask.request.form["password"]
@@ -45,14 +35,9 @@ def render_registration():
                 DATABASE.session.commit()
         except Exception as _ex:
             print(f"Error in func render registration \n\n{_ex}")
-    return flask.render_template(template_name_or_list = "registration.html", username = username,confirm = confirm, link = "None")
+    return flask.render_template(template_name_or_list = "registration.html",confirm = confirm, link = "None")
 
 def render_login():
-    username = ""
-    try:
-        username = flask_login.current_user.username
-    except:
-        username = ""
     confirm = True
     if flask.request.method == "POST":
         confirm = False
@@ -63,4 +48,4 @@ def render_login():
             if user.username == name and user.password == password:
                 flask_login.login_user(user=user)
                 return flask.redirect("/")
-    return flask.render_template(template_name_or_list = "login.html", username = username,confirm = confirm, link = "None")
+    return flask.render_template(template_name_or_list = "login.html",confirm = confirm, link = "None")

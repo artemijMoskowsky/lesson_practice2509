@@ -24,7 +24,7 @@
                     <a class="link" href="/user/login/">Login</a>
                 {% endif %}
                 {% if username != "" %}
-                    <h1> {{ username }} </h1>
+                    <h2 class="greating">Вітаємо, {{ username }} </h2>
                     <button id = "log_out_button">
                         <img id="logout-image" src="{{ url_for('static', filename='images/Logout.png') }}" alt="None">
                     </button>

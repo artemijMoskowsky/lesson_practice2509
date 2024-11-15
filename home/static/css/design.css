@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .feedback_form {
     left: 21px;
     border-radius: 20px;
