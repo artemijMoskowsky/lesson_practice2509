@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    background-color: #DCE6FF
+}
+
+.main-show{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-show{
+    background-color: rgb(131, 145, 202);
+    width: 1146px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 25px;
+}
+
+.white-show{
+    background-color: white;
+    width: 1023px;
+    height: 396px;
+    display: flex;
+}
+
+.for-objects{
+    width: 793px;
+    height: 396px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.for-country{
+    background-color: rgb(198, 206, 237);
+    width: 561px;
+    height: 58px;
+    margin-left: 50px;
+    margin-right: 25px;
+    font-family:'Inter', sans-serif; 
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(101, 115, 172);
+    border-width: 1px;
+    border-color: rgb(131, 145, 202);
+    border-style: solid;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-description{
+    background-color: rgb(198, 206, 237);
+    width: 561px;
+    height: 145px;
+    margin-left: 50px;
+    margin-right: 25px;
+    margin-top: 34px;
+    font-family:'Inter', sans-serif; 
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(101, 115, 172);
+    border-width: 1px;
+    border-color: rgb(131, 145, 202);
+    border-style: solid;
+    text-align: center;
+}
+
+.image-show{
+    width: 316px;
+    height: 170px;
+}
+
+h1{
+    margin-right: 300px;
+    text-align: center;
+    font-family:'Inter', sans-serif; 
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(101, 115, 172);
+}
+h2{
+    font-family:'Inter', sans-serif; 
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(101, 115, 172);
+    width: auto;
+    height: 50px;
+    display: inline-block;
+}
+
+.h-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+
+}
